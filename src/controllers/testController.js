@@ -1,8 +1,9 @@
 const testService = require('../services/testService');
+const multer = require('multer');
 
 const handleSaveInfo = async (req, res) => {
     try {
-        if (!req.body.text) {
+        if (!req.body.image || !req.body.productId) {
             return res.status(200).json({
                 EM: 'missing required parameters', // error message
                 EC: '-1', // error code,
@@ -10,7 +11,7 @@ const handleSaveInfo = async (req, res) => {
             });
         }
 
-        testService.addNewInfo(req.body.text);
+        testService.addNewInfo(req.body);
         return res.status(200).json({
             EM: req.body.text, // error message
             EC: 1, // error code,

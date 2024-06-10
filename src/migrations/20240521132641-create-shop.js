@@ -13,10 +13,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       logo: {
-        type: Sequelize.BLOB
+        type: Sequelize.BLOB('long')
       },
       background: {
-        type: Sequelize.BLOB
+        type: Sequelize.BLOB('long')
       },
       description: {
         type: Sequelize.STRING

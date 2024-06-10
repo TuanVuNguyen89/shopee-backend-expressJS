@@ -1,13 +1,12 @@
 const express = require('express');
-const testController = require('../controllers/testController');
+const loginController = require('../controllers/loginController');
 const router = express.Router();
 const { checkUserJWT, checkUserPermission } = require('../middleware/JWTActions');
 
 const initApiRoutes = (app) => {
     router.all('*', checkUserJWT, checkUserPermission);
-    router.post('/test', testController.handleSaveInfo);
-    router.get('/test', testController.showSaveInfo);
-    router.delete('/test/:dataId', testController.deleteData);
+    router.post('/login', loginController.handleLogin);
+    router.get('/account', loginController.handleAccount)
 
     return app.use("/api/v1", router);
 }

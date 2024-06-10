@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       image: {
-        type: Sequelize.BLOB
+        type: Sequelize.BLOB('long')
       },
       createdAt: {
         allowNull: false,

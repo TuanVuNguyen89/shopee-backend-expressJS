@@ -1,11 +1,14 @@
 const db = require('../models/index')
 
-const addNewInfo = async (text) => {
-    await db.Data.create({ data: text })
+const addNewInfo = async (data) => {
+    await db.Product_image.create({
+        productId: data.productId,
+        image: data.image
+    })
 }
 
 const getAllData = async () => {
-    const data = await db.Data.findAll();
+    const data = await db.Product_image.findAll();
 
     try {
         return {
