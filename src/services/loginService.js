@@ -65,6 +65,7 @@ const deleteData = async (dataId) => {
 }
 
 const handleLogin = async (rawUserData) => {
+    //console.log("userData", rawUserData);
     try {
         if (rawUserData.valueLogin === process.env.ACCOUNT && rawUserData.password === process.env.PASSWORD) {
             // test roles
