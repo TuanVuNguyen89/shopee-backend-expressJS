@@ -3,8 +3,13 @@ const configCors = (app) => {
     app.use(function (req, res, next) {
         //console.log(req.method);
         // Website you wish to allow to connect
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+        const allowedOrigins = ['http://localhost:3000',
+            'https://dc26rcmp-3000.asse.devtunnels.ms'];
+        const origin = req.headers.origin;
 
+        if (allowedOrigins.includes(origin)) {
+            res.setHeader('Access-Control-Allow-Origin', origin);
+        }
         // Request methods you wish to allow
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 

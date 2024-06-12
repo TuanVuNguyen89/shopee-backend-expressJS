@@ -24,6 +24,7 @@ const editProductInfo = async (data) => {
     });
 
     //console.log(">>> check data here: ", data);
+
     if (product) {
         await product.update({
             name: data.name,
