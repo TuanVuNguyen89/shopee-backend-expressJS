@@ -1,25 +1,23 @@
 const configCors = (app) => {
     // Add headers before the routes are defined
     app.use(function (req, res, next) {
-        //console.log(req.method);
-        // Website you wish to allow to connect
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+        const allowedOrigins = ['http://localhost:3000','https://mnmtkg1g-3000.asse.devtunnels.ms'];
+        const origin = req.headers.origin;
 
-        // Request methods you wish to allow
+        console.log(origin);
+        console.log(allowedOrigins.includes(origin));
+        if (allowedOrigins.includes(origin)) {
+            res.setHeader('Access-Control-Allow-Origin', origin);
+        }
+
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-
-        // Request headers you wish to allow
-        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
-
-        // Set to true if you need the website to include cookies in the requests sent
-        // to the API (e.g. in case you use sessions)
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Authorization');
         res.setHeader('Access-Control-Allow-Credentials', true);
 
         if (req.method === 'OPTIONS') {
             return res.sendStatus(200);
         }
 
-        // Pass to next layer of middleware
         next();
     });
 }

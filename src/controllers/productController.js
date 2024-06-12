@@ -85,7 +85,7 @@ const editProductInfo = async (req, res) => {
             DT: data, // data
         });
     } catch (e) {
-        console.log(e);
+        //console.log(e);
         return res.status(500).json({
             EM: 'error from server', // error message
             EC: -1, // error code
