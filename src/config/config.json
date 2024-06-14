@@ -15,6 +15,9 @@
         "require": true,
         "rejectUnauthorized": false
       }
+    },
+    "define": {
+      "freezeTableName": true
     }
   },
   "test": {
