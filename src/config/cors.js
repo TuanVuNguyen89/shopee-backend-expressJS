@@ -4,7 +4,7 @@ const configCors = (app) => {
         //console.log(req.method);
         // Website you wish to allow to connect
         const allowedOrigins = ['http://localhost:3000',
-            'https://shopee-frontend-reactjs.onrender.com'];
+            'https://shopee-frontend-reactjs-gjg5.vercel.app'];
         const origin = req.headers.origin;
 
         if (allowedOrigins.includes(origin)) {
