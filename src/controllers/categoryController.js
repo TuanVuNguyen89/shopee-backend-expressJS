@@ -16,7 +16,7 @@ const createCategoryInfo = async (req, res) => {
         categoryService.createCategoryInfo(req.body);
         return res.status(200).json({
             EM: 'create category info success', // error message
-            EC: 1, // error code,
+            EC: 0, // error code,
             DT: req.body, // data
         });
     }

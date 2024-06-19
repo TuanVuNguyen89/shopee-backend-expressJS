@@ -1,21 +1,11 @@
 {
   "development": {
-    "username": "f4b67auhz6s3gmt6",
-    "password": "et3itnhm1vziys18",
-    "database": "z0vz6mqi3014e6pl",
-    "host": "mwgmw3rs78pvwk4e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "uytwr8ltf9ormvha",
+    "password": "NGU0NvbSAdRc4irvsIur",
+    "database": "b51c3pupfagrchg2v7jy",
+    "host": "b51c3pupfagrchg2v7jy-mysql.services.clever-cloud.com",
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
-    "timezone": "+07:00",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    },
     "define": {
       "freezeTableName": true
     }
@@ -27,16 +17,6 @@
     "host": "mwgmw3rs78pvwk4e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
-    "timezone": "+07:00",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    },
     "define": {
       "freezeTableName": true
     }
@@ -48,16 +28,6 @@
     "host": "mwgmw3rs78pvwk4e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "logging": false,
-    "query": {
-      "raw": true
-    },
-    "timezone": "+07:00",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    },
     "define": {
       "freezeTableName": true
     }

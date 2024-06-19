@@ -76,6 +76,7 @@ const editProductInfo = async (req, res) => {
             });
         }
 
+        //console.log("test test");
         const data = { id, name, price, categoryId, mainImage: image[0], image, description };
         await productService.editProductInfo(data);
 

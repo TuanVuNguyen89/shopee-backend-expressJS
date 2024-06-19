@@ -24,7 +24,7 @@ const editProductInfo = async (data) => {
     });
 
     //console.log(">>> check data here: ", data);
-
+    //console.log(">>> product: ", product);
     if (product) {
         await product.update({
             name: data.name,
@@ -38,17 +38,17 @@ const editProductInfo = async (data) => {
             where: { productId: +data.id }
         })
 
-        let updated_data = data.image.map((image, index) => {
+        data.image.map(async (image, index) => {
             let cur_data = {
                 image: image,
                 productId: +data.id
             }
 
-            return cur_data;
+            const jane = db.Product_image.build(cur_data);
+            await jane.save();
         });
 
         //console.log(">>> updated_data", updated_data);
-        await db.Product_image.bulkCreate(updated_data);
 
         return {
             EM: 'update product success',
@@ -119,7 +119,11 @@ const readProductById = async (id) => {
 }
 
 const readAllProductInfo = async (data) => {
-    const products = await db.Product.findAll();
+    const products = await db.Product.findAll({
+        order: [
+            ['id', 'DESC']
+        ]
+    });
 
     try {
         return {
@@ -150,7 +154,10 @@ const readProductWithPagination = async (page, limit, type) => {
             let { count, rows } = await db.Product.findAndCountAll({
                 offset: offset,
                 limit: limit,
-                where: { categoryId: type }
+                where: { categoryId: type },
+                order: [
+                    ['id', 'DESC']
+                ]
             });
 
             //console.log(">>> check count: ", count);
@@ -166,7 +173,10 @@ const readProductWithPagination = async (page, limit, type) => {
         else {
             let { count, rows } = await db.Product.findAndCountAll({
                 offset: offset,
-                limit: limit
+                limit: limit,
+                order: [
+                    ['id', 'DESC']
+                ]
             });
 
             //console.log(">>> check count: ", count);
