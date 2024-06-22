@@ -10,13 +10,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci'
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci'
       },
       price: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        charset: 'utf8mb4',
+        collate: 'utf8mb4_unicode_ci'
       },
       categoryId: {
         type: Sequelize.INTEGER

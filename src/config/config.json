@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "uytwr8ltf9ormvha",
-    "password": "NGU0NvbSAdRc4irvsIur",
-    "database": "b51c3pupfagrchg2v7jy",
-    "host": "b51c3pupfagrchg2v7jy-mysql.services.clever-cloud.com",
+    "username": "fmowneyq_ntuanvu89",
+    "password": "m1gw;ex(Id@9",
+    "database": "fmowneyq_shopee",
+    "host": "103.221.220.68",
     "dialect": "mysql",
     "logging": false,
     "define": {
