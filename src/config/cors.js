@@ -4,7 +4,8 @@ const configCors = (app) => {
         //console.log(req.method);
         // Website you wish to allow to connect
         const allowedOrigins = ['http://localhost:3000',
-            'https://mualuxstore.com'];
+            'https://mualuxstore.com',
+            'https://shopee-backend-dx56.onrender.com'];
         const origin = req.headers.origin;
 
         if (allowedOrigins.includes(origin)) {
